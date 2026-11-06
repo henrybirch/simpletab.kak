@@ -37,20 +37,20 @@ define-command -override simpletab-show-buffers -docstring 'Show a list of buffe
                 number=-1
             fi
 
-	    if [ "$buffer" = "$kak_bufname" ]; then
+            if [ "$buffer" = "$kak_bufname" ]; then
                 if [ ! $number = -1 ]; then
-        	    printf "{%s}%s. %s{%s}\n" "$kak_opt_simpletab_current_buffer_face" "$number" "$buffer" "$kak_opt_simpletab_default_face"
+                    printf "{%s}%s. %s{%s}\n" "$kak_opt_simpletab_current_buffer_face" "$number" "$buffer" "$kak_opt_simpletab_default_face"
                 else
-        	    printf "{%s}%s{%s}\n" "$kak_opt_simpletab_current_buffer_face"  "$buffer" "$kak_opt_current_default_face"
+                    printf "{%s}%s{%s}\n" "$kak_opt_simpletab_current_buffer_face"  "$buffer" "$kak_opt_current_default_face"
                 fi
-	    else
+            else
                 if [ ! $number = -1 ]; then
                     printf "{%s}%s. %s{%s}\n" "$kak_opt_simpletab_default_face" "$number" "$buffer" "$kak_opt_simpletab_default_face" 
                 else
                     printf "{%s}%s{%s}\n" "$kak_opt_simpletab_default_face" "$buffer" "$kak_opt_simpletab_default_face" 
                 fi
-	    fi
-	done
+            fi
+        done
     }
 }
 
