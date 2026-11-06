@@ -14,7 +14,7 @@ The face used for the text that represents the current buffer.
 Please note that all indices are 0 based other than the visual representation that is 1..9 and then 0.
 
 ## Possible keybinds
-``
+```
 map global user <b> ': simpletab-show-buffers<ret>' -docstring 'Show-Buffers'
 
 map global normal <c-n> ': bn<ret>:simpletab-show-buffers<ret>'
@@ -47,4 +47,4 @@ map global normal <c-a-7> ':simpletab-move-buffer-to-index 6<ret>:simpletab-show
 map global normal <c-a-8> ':simpletab-move-buffer-to-index 7<ret>:simpletab-show-buffers<ret>'
 map global normal <c-a-9> ':simpletab-move-buffer-to-index 8<ret>:simpletab-show-buffers<ret>'
 map global normal <c-a-0> ':simpletab-move-buffer-to-index 9<ret>:simpletab-show-buffers<ret>'
-``
+```
