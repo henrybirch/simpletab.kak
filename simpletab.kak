@@ -54,7 +54,7 @@ define-command -override simpletab-show-buffers -docstring 'Show a list of buffe
     }
 }
 
-define-command -override -params 1 simpletab-get-buffer-by-index -docstring 'Get buffer by index in kak_opt_buflist. Ignore those in simpletab_bufnames_to_ignore.' %{
+define-command -override -params 1 simpletab-get-buffer-by-index -docstring 'Switches to buffer by index in kak_opt_buflist. Ignore those in simpletab_bufnames_to_ignore.' %{
     evaluate-commands %sh{
         user_index="$1"
         eval "set -- $kak_quoted_opt_simpletab_bufnames_to_ignore"
@@ -91,7 +91,7 @@ define-command -override -params 1 simpletab-get-buffer-by-index -docstring 'Get
     }
 }
 
-define-command -override -params 1 simpletab-move-buffer-to-index -docstring 'Move the current buffer towards the start of buflist (-1) or towards the end (1). Wraps around.' %{
+define-command -override -params 1 simpletab-move-buffer-to-index -docstring 'Move buffer to specific index. 0 indexed. Fails if index is not within bounds of current buflist.' %{
     evaluate-commands %sh{
         user_index="$1"
 
@@ -187,7 +187,7 @@ define-command -override -params 1 simpletab-move-buffer-to-index -docstring 'Mo
     }
 }
 
-define-command -override -params 1 simpletab-move-buffer %{
+define-command -override -params 1 simpletab-move-buffer -docstring 'Moves the current buffer 1 index in either the negative or positive direction. Wraps around.' %{
     evaluate-commands %sh{
         if [ "$1" = "-1" ]; then
             amount="-1"
