@@ -2,13 +2,13 @@
 Very simple tab menu using info -markup kakoune command. Has functions for switching to buffer by index, moving the current buffer by index and by 1 in the positive and negative directions. Botched solution just to get a functioning 'tab menu'.
 
 ## Default options
-declare-option str-list simpletab_bufnames_to_ignore "\*lint-output\*" "\*debug\*"<br>
+```declare-option str-list simpletab_bufnames_to_ignore "\*lint-output\*" "\*debug\*"<br>```
 :bp and :bn ignore these two so I ignore them in the popup and when using indices.
 
-declare-option str simpletab_default_face "Menu"<br>
+```declare-option str simpletab_default_face "Menu"<br>```
 The face used for the text that represents all buffers other than the current buffer.
 
-declare-option str simpletab_current_buffer_face "PrimaryCursor"<br>
+```declare-option str simpletab_current_buffer_face "PrimaryCursor"<br>```
 The face used for the text that represents the current buffer.
 
 Please note that all indices are 0 based other than the visual representation that is 1..9 and then 0.
